@@ -1,0 +1,12 @@
+version: '3'
+services:
+  client:
+    container_name: ableton
+    image: ableton:tag
+    command: npm run docker
+    build:
+      context: ./
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/app/src
